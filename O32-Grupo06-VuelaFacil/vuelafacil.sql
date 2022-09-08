@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-09-2022 a las 02:24:31
+-- Tiempo de generación: 03-09-2022 a las 20:14:39
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -20,40 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `vuelafacil`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `agencias`
---
-
-CREATE TABLE `agencias` (
-  `id_agencia` int(11) NOT NULL,
-  `nombre_agencia` varchar(45) NOT NULL,
-  `direccion_agencia` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `destino`
---
-
-CREATE TABLE `destino` (
-  `id_destino` int(11) NOT NULL,
-  `nombre_destino` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `origen`
---
-
-CREATE TABLE `origen` (
-  `id_origen` int(11) NOT NULL,
-  `nombre_origen` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -84,28 +50,6 @@ CREATE TABLE `rol_usuarios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rutas`
---
-
-CREATE TABLE `rutas` (
-  `id_ruta` int(11) NOT NULL,
-  `nombre_ruta` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tipo_vuelo`
---
-
-CREATE TABLE `tipo_vuelo` (
-  `id_tipo_vuelo` int(11) NOT NULL,
-  `nombre_tipo_vuelo` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -116,8 +60,7 @@ CREATE TABLE `usuarios` (
   `documento` int(10) NOT NULL,
   `email` varchar(30) NOT NULL,
   `clave` varchar(30) NOT NULL,
-  `direccion` int(30) NOT NULL,
-  `rol_usuario` int(11) NOT NULL
+  `direccion` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
