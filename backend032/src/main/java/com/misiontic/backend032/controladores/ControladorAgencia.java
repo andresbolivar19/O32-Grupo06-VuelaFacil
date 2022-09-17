@@ -33,7 +33,7 @@ public class ControladorAgencia {
     @PostMapping("/agencias")
     public ResponseEntity<Agencias> guardarAgencia(@RequestBody Agencias agencia) {
         Agencias nuevoAgencia = new Agencias(agencia.getNombreAgencia(), agencia.getDireccionAgencia());
-        return new ResponseEntity<>(agenciaDao.save(nuevoAgencia), HttpStatus.CREATED)
+        return new ResponseEntity<>(agenciaDao.save(nuevoAgencia), HttpStatus.CREATED);
     }
 
     @PutMapping("/agencias/{id}")
