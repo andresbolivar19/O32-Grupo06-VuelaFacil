@@ -14,18 +14,18 @@ import javax.persistence.Table;
 public class Agencias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idAgencia;
+    private int idAgencia;
 
     @Column(name="nombreAgencia", nullable = false)
     private String nombreAgencia;
     
     @Column(name="direccionAgencia", nullable = false)
-    private double direccionAgencia;
+    private String direccionAgencia;
 
     public Agencias() {
     }
 
-    public Agencias(String nombreAgencia, double direccionAgencia) {
+    public Agencias(String nombreAgencia, String direccionAgencia) {
         this.nombreAgencia = nombreAgencia;
         this.direccionAgencia = direccionAgencia;
         }
@@ -44,16 +44,15 @@ public class Agencias {
         this.nombreAgencia = nombreAgencia;
     }
 
-    public double getDireccionAgencia() {
+    public String getDireccionAgencia() {
         return direccionAgencia;
     }
-    public void setDireccionAgencia(double direccionAgencia) {
+    public void setDireccionAgencia(String direccionAgencia) {
         this.direccionAgencia = direccionAgencia;
     }
 
     @Override
     public String toString() {
-        return "Agencias [idAgencia=" + idAgencia + ", nombreAgencia=" + nombreAgencia
-                + ", direccionAgencia=" + direccionAgencia + "]";
+        return "Agencias [idAgencia=" + idAgencia + ", nombreAgencia=" + nombreAgencia + ", direccionAgencia=" + direccionAgencia + "]";
     }
 }
