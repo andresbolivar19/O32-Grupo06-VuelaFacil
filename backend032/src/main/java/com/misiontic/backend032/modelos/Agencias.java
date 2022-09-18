@@ -12,6 +12,8 @@ import javax.persistence.Table;
 @Table(name = "agencias")
 
 public class Agencias {
+    private static final String String = null;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAgencia;
@@ -28,6 +30,10 @@ public class Agencias {
     public Agencias(String nombreAgencia, String direccionAgencia) {
         this.nombreAgencia = nombreAgencia;
         this.direccionAgencia = direccionAgencia;
+    }
+
+    public String getAgencias() {
+        return getNombreAgencia();
     }
 
     public long getIdAgencia() {
