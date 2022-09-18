@@ -33,7 +33,7 @@ public class Agencias {
     public long getIdAgencia() {
         return idAgencia;
     }
-    public void setIdAgencia(long idAgencia) {
+    public void setIdAgencia(int idAgencia) {
         this.idAgencia = idAgencia;
     }
 
