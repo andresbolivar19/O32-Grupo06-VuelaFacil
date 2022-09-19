@@ -79,11 +79,10 @@ public class ControladorAgencia {
     }
 
     @DeleteMapping("/agencias/{id}")
-    public ResponseEntity<HttpStatus> borrarAgencia(@PathVariable Long id) {
+    public ResponseEntity<HttpStatus> borrarAgencia(@PathVariable("id") Long id) {
 
         agenciaDao.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 
     }
-
 }

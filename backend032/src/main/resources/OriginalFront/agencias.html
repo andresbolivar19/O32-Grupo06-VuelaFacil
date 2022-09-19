@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mitienda Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://lms.uis.edu.co/mintic2022/pluginfile.php/1/theme_edumy/favicon/1660224179/favicon.png" />
+    <title> pagina de  misiontic</title>
+</head>
+<body onload="listartodos()" >
+
+    <h1>Pagina de las Agencias</h1>
+   
+    <p>Esta es la pagina donde se mostrara las agencias </p>
+   
+<div id="listaproductos">
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+ const instancia = axios.create(
+    {
+        baseURL:"http://localhost:8080/api",
+        headers: {
+            "Content-Type": "application/json" 
+        }
+    }
+ );
+
+async function listartodos(){
+    let resultados = document.getElementById("listaagencias");
+    const respuesta = await instancia.get("/agencias");
+    let tabla = '<table>';
+
+    respuesta.data.forEach(function(agencia){
+        tabla += '<tr><td>' + agencia.idAgencia 
+             + '</td><td>' + agencia.nombreAgencia 
+               + '</td><td>' + agencia.direccionAgencia
+                + '</td></tr>';
+
+    });
+
+    tabla += '</table>';
+    resultados.innerHTML = tabla;
+
+}
+
+</script>
+
+</body>
+</html>

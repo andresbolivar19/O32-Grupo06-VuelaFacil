@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Agencias {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAgencia;
+    private long idAgencia;
 
     @Column(name="nombreAgencia", nullable = false)
     private String nombreAgencia;
